@@ -7,9 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "DKView.h"
 
 @interface ViewController ()
-@property (nonatomic,strong)UIView * baseView;
+@property (nonatomic,strong)DKView * dkView;
 
 @end
 
@@ -19,7 +20,7 @@
 #pragma mark - Life Cycle
 
 -(void)loadView{
-    self.view = self.baseView;
+    self.view = self.dkView;
 }
 
 
@@ -38,12 +39,11 @@
 
 
 #pragma mark - Property Method
--(UIView *)baseView{
-    if (!_baseView) {
-        _baseView = [UIView new];
-        _baseView.backgroundColor = [UIColor whiteColor];
+-(DKView *)dkView{
+    if (!_dkView) {
+        _dkView = [DKView new];
     }
-    return _baseView;
+    return _dkView;
 }
 
 
