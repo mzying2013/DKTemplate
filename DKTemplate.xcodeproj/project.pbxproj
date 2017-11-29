@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		A9276AB71FCE48C00025FC7D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9276AB61FCE48C00025FC7D /* AppDelegate.m */; };
 		A9276ABA1FCE48C00025FC7D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9276AB91FCE48C00025FC7D /* ViewController.m */; };
-		A9276ABD1FCE48C00025FC7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9276ABB1FCE48C00025FC7D /* Main.storyboard */; };
 		A9276ABF1FCE48C00025FC7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9276ABE1FCE48C00025FC7D /* Assets.xcassets */; };
 		A9276AC21FCE48C00025FC7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9276AC01FCE48C00025FC7D /* LaunchScreen.storyboard */; };
 		A9276AC51FCE48C00025FC7D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9276AC41FCE48C00025FC7D /* main.m */; };
 		A9276ACF1FCE48C00025FC7D /* DKTemplateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9276ACE1FCE48C00025FC7D /* DKTemplateTests.m */; };
+		A9276ADB1FCE83190025FC7D /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9276ADA1FCE83190025FC7D /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +32,6 @@
 		A9276AB61FCE48C00025FC7D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A9276AB81FCE48C00025FC7D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		A9276AB91FCE48C00025FC7D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		A9276ABC1FCE48C00025FC7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A9276ABE1FCE48C00025FC7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9276AC11FCE48C00025FC7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9276AC31FCE48C00025FC7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -40,6 +39,9 @@
 		A9276ACA1FCE48C00025FC7D /* DKTemplateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DKTemplateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9276ACE1FCE48C00025FC7D /* DKTemplateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKTemplateTests.m; sourceTree = "<group>"; };
 		A9276AD01FCE48C00025FC7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9276AD91FCE83190025FC7D /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		A9276ADA1FCE83190025FC7D /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		A9A398611FCE869600883765 /* DKViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKViewProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +83,13 @@
 		A9276AB41FCE48C00025FC7D /* DKTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				A9A398601FCE85FB00883765 /* Protocol */,
 				A9276AB51FCE48C00025FC7D /* AppDelegate.h */,
 				A9276AB61FCE48C00025FC7D /* AppDelegate.m */,
 				A9276AB81FCE48C00025FC7D /* ViewController.h */,
 				A9276AB91FCE48C00025FC7D /* ViewController.m */,
-				A9276ABB1FCE48C00025FC7D /* Main.storyboard */,
+				A9276AD91FCE83190025FC7D /* DetailViewController.h */,
+				A9276ADA1FCE83190025FC7D /* DetailViewController.m */,
 				A9276ABE1FCE48C00025FC7D /* Assets.xcassets */,
 				A9276AC01FCE48C00025FC7D /* LaunchScreen.storyboard */,
 				A9276AC31FCE48C00025FC7D /* Info.plist */,
@@ -101,6 +105,14 @@
 				A9276AD01FCE48C00025FC7D /* Info.plist */,
 			);
 			path = DKTemplateTests;
+			sourceTree = "<group>";
+		};
+		A9A398601FCE85FB00883765 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				A9A398611FCE869600883765 /* DKViewProtocol.h */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,7 +164,7 @@
 				TargetAttributes = {
 					A9276AB11FCE48C00025FC7D = {
 						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					A9276AC91FCE48C00025FC7D = {
 						CreatedOnToolsVersion = 9.1;
@@ -187,7 +199,6 @@
 			files = (
 				A9276AC21FCE48C00025FC7D /* LaunchScreen.storyboard in Resources */,
 				A9276ABF1FCE48C00025FC7D /* Assets.xcassets in Resources */,
-				A9276ABD1FCE48C00025FC7D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +219,7 @@
 				A9276ABA1FCE48C00025FC7D /* ViewController.m in Sources */,
 				A9276AC51FCE48C00025FC7D /* main.m in Sources */,
 				A9276AB71FCE48C00025FC7D /* AppDelegate.m in Sources */,
+				A9276ADB1FCE83190025FC7D /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,14 +242,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A9276ABB1FCE48C00025FC7D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A9276ABC1FCE48C00025FC7D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A9276AC01FCE48C00025FC7D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -357,12 +361,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 6PTG33TQCL;
 				INFOPLIST_FILE = DKTemplate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mzying.DKTemplate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "fa712333-24da-4b58-8fc9-8f06a2e4fe35";
+				PROVISIONING_PROFILE_SPECIFIER = DevWildcardProfiles;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -371,12 +377,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 6PTG33TQCL;
 				INFOPLIST_FILE = DKTemplate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mzying.DKTemplate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6743a549-6f60-4b72-a21a-201914ea4c63";
+				PROVISIONING_PROFILE_SPECIFIER = DisWildcardProfiles;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
