@@ -25,29 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-//
-//    UIView * rightItemView = [UIView new];
-//    rightItemView.backgroundColor = [UIColor redColor];
-//
-//    NSLayoutConstraint * widthLayoutConstraint = [NSLayoutConstraint constraintWithItem:rightItemView
-//                                                                         attribute:NSLayoutAttributeWidth
-//                                                                         relatedBy:NSLayoutRelationEqual
-//                                                                            toItem:nil
-//                                                                         attribute:NSLayoutAttributeNotAnAttribute
-//                                                                        multiplier:1.0
-//                                                                          constant:40];
-//    NSLayoutConstraint * heightLayoutConstraint = [NSLayoutConstraint constraintWithItem:rightItemView
-//                                                                               attribute:NSLayoutAttributeHeight
-//                                                                               relatedBy:NSLayoutRelationEqual
-//                                                                                  toItem:nil
-//                                                                               attribute:NSLayoutAttributeNotAnAttribute
-//                                                                              multiplier:1.0
-//                                                                                constant:30];
     
-    
-//    [rightItemView addConstraints:@[widthLayoutConstraint,heightLayoutConstraint]];
-//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightItemView];
 }
 
 
