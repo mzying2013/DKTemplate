@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @protocol DKModelProtocol <NSObject>
+@property (nonatomic,strong) id data;
 
 @end

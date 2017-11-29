@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+@protocol DKModelProtocol;
 
 @protocol DKViewModelProtocol <NSObject>
+@property (nonatomic,strong) id<DKModelProtocol> model;
+-(void)dynamicBindingWithFinishedCallBack:(void(^)())finishCallBack;
 
 @end
