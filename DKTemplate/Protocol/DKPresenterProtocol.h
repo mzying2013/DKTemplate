@@ -1,5 +1,5 @@
 //
-//  DKViewProtocol.h
+//  DKPresenterProtocol.h
 //  DKTemplate
 //
 //  Created by bill on 2017/11/29.
@@ -7,13 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-@protocol DKViewModelProtocol;
 
-
-@protocol DKViewProtocol <NSObject>
--(void)pushTo;
+@protocol DKPresenterProtocol <NSObject>
+-(void)push;
 
 @end
-
-
-

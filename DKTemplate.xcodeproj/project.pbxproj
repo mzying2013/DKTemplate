@@ -45,6 +45,9 @@
 		A9A398611FCE869600883765 /* DKViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKViewProtocol.h; sourceTree = "<group>"; };
 		A9A398631FCE923100883765 /* DKView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKView.h; sourceTree = "<group>"; };
 		A9A398641FCE923100883765 /* DKView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKView.m; sourceTree = "<group>"; };
+		A9A398661FCEA16100883765 /* DKModelProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKModelProtocol.h; sourceTree = "<group>"; };
+		A9A398671FCEA17B00883765 /* DKViewModelProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKViewModelProtocol.h; sourceTree = "<group>"; };
+		A9A398681FCEA1D400883765 /* DKPresenterProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKPresenterProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,9 @@
 			isa = PBXGroup;
 			children = (
 				A9A398611FCE869600883765 /* DKViewProtocol.h */,
+				A9A398661FCEA16100883765 /* DKModelProtocol.h */,
+				A9A398671FCEA17B00883765 /* DKViewModelProtocol.h */,
+				A9A398681FCEA1D400883765 /* DKPresenterProtocol.h */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
