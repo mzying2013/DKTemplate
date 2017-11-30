@@ -10,8 +10,10 @@
 @protocol DKViewProtocol;
 @protocol DKViewModelProtocol;
 
+
+
 @protocol DKPresenterProtocol <NSObject>
--(void)push;
+-(void)push:(id)userInfo;
 - (void)adapterWithView:(id<DKViewProtocol>)view viewModel:(id<DKViewModelProtocol>)viewModel;
 
 @end

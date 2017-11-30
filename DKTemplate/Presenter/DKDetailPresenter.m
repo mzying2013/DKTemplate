@@ -31,7 +31,7 @@
 
 
 
--(void)push{
+-(void)push:(id)userInfo{
     
 }
 

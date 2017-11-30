@@ -76,7 +76,7 @@ static NSString * const kCellID = @"kCellID";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:kCellID];
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+//    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     NSString * text = self.viewModel.model.datas[indexPath.row];
     cell.textLabel.text = text;
     return cell;
@@ -87,7 +87,9 @@ static NSString * const kCellID = @"kCellID";
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [self.presenter push];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    NSString * text = self.viewModel.model.datas[indexPath.row];
+    [self.presenter push:text];
 }
 
 
