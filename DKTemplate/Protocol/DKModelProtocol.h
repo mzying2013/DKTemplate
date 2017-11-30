@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @protocol DKModelProtocol <NSObject>
-@property (nonatomic,strong) id data;
++(instancetype)modelWithDictionary:(NSDictionary *)dictionary;
 
 @end

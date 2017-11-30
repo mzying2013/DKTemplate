@@ -17,6 +17,9 @@
 		A94CEF741FCEB39E00549619 /* DKDetailPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A94CEF731FCEB39E00549619 /* DKDetailPresenter.m */; };
 		A9A398651FCE923100883765 /* DKView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A398641FCE923100883765 /* DKView.m */; };
 		A9F302C01FCFAC2300A5D9CC /* DKDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F302BF1FCFAC2300A5D9CC /* DKDetailView.m */; };
+		A9F302C71FCFD5FD00A5D9CC /* DKDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F302C61FCFD5FD00A5D9CC /* DKDetailViewModel.m */; };
+		A9F302CA1FCFDAD600A5D9CC /* DKModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F302C91FCFDAD600A5D9CC /* DKModel.m */; };
+		A9F302CE1FCFE0F100A5D9CC /* DKNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F302CD1FCFE0F100A5D9CC /* DKNetwork.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,12 @@
 		A9A398681FCEA1D400883765 /* DKPresenterProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKPresenterProtocol.h; sourceTree = "<group>"; };
 		A9F302BE1FCFAC2300A5D9CC /* DKDetailView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKDetailView.h; sourceTree = "<group>"; };
 		A9F302BF1FCFAC2300A5D9CC /* DKDetailView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKDetailView.m; sourceTree = "<group>"; };
+		A9F302C51FCFD5FD00A5D9CC /* DKDetailViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKDetailViewModel.h; sourceTree = "<group>"; };
+		A9F302C61FCFD5FD00A5D9CC /* DKDetailViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKDetailViewModel.m; sourceTree = "<group>"; };
+		A9F302C81FCFDAD600A5D9CC /* DKModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKModel.h; sourceTree = "<group>"; };
+		A9F302C91FCFDAD600A5D9CC /* DKModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKModel.m; sourceTree = "<group>"; };
+		A9F302CC1FCFE0F100A5D9CC /* DKNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKNetwork.h; sourceTree = "<group>"; };
+		A9F302CD1FCFE0F100A5D9CC /* DKNetwork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKNetwork.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,10 +104,13 @@
 		A9276AB41FCE48C00025FC7D /* DKTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				A9A398621FCE91E000883765 /* View */,
+				A9F302CB1FCFE0E100A5D9CC /* Network */,
 				A9A398601FCE85FB00883765 /* Protocol */,
+				A9A398621FCE91E000883765 /* View */,
 				A9F302C11FCFD56000A5D9CC /* ViewController */,
 				A9F302C21FCFD58900A5D9CC /* Presenter */,
+				A9F302C31FCFD5BB00A5D9CC /* Model */,
+				A9F302C41FCFD5BB00A5D9CC /* ViewModel */,
 				A9276AB51FCE48C00025FC7D /* AppDelegate.h */,
 				A9276AB61FCE48C00025FC7D /* AppDelegate.m */,
 				A9276ABE1FCE48C00025FC7D /* Assets.xcassets */,
@@ -158,6 +170,33 @@
 				A94CEF731FCEB39E00549619 /* DKDetailPresenter.m */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		A9F302C31FCFD5BB00A5D9CC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A9F302C81FCFDAD600A5D9CC /* DKModel.h */,
+				A9F302C91FCFDAD600A5D9CC /* DKModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A9F302C41FCFD5BB00A5D9CC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A9F302C51FCFD5FD00A5D9CC /* DKDetailViewModel.h */,
+				A9F302C61FCFD5FD00A5D9CC /* DKDetailViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A9F302CB1FCFE0E100A5D9CC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A9F302CC1FCFE0F100A5D9CC /* DKNetwork.h */,
+				A9F302CD1FCFE0F100A5D9CC /* DKNetwork.m */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +301,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9F302C01FCFAC2300A5D9CC /* DKDetailView.m in Sources */,
+				A9F302CE1FCFE0F100A5D9CC /* DKNetwork.m in Sources */,
 				A9276ABA1FCE48C00025FC7D /* ViewController.m in Sources */,
 				A9276AC51FCE48C00025FC7D /* main.m in Sources */,
+				A9F302CA1FCFDAD600A5D9CC /* DKModel.m in Sources */,
 				A9276AB71FCE48C00025FC7D /* AppDelegate.m in Sources */,
+				A9F302C71FCFD5FD00A5D9CC /* DKDetailViewModel.m in Sources */,
 				A9276ADB1FCE83190025FC7D /* DetailViewController.m in Sources */,
 				A94CEF741FCEB39E00549619 /* DKDetailPresenter.m in Sources */,
 				A9A398651FCE923100883765 /* DKView.m in Sources */,

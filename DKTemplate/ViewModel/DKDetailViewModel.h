@@ -1,16 +1,17 @@
 //
-//  DKViewModelProtocol.h
+//  DKDetailViewModel.h
 //  DKTemplate
 //
-//  Created by bill on 2017/11/29.
+//  Created by bill on 2017/11/30.
 //  Copyright © 2017年 bill. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
+#import "DKViewModelProtocol.h"
 @protocol DKModelProtocol;
 
-@protocol DKViewModelProtocol <NSObject>
+@interface DKDetailViewModel : NSObject<DKViewModelProtocol>
 @property (nonatomic,strong) id<DKModelProtocol> model;
--(void)dynamicBindingWithFinishedCallBack:(void(^)(void))finishCallBack;
+
 
 @end
