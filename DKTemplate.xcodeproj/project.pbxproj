@@ -23,6 +23,11 @@
 		A9F302D41FD005CA00A5D9CC /* DKModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F302D31FD005CA00A5D9CC /* DKModel.m */; };
 		A9F302D71FD0065D00A5D9CC /* DKViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F302D61FD0065D00A5D9CC /* DKViewModel.m */; };
 		A9F302DA1FD0071400A5D9CC /* DKPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F302D91FD0071400A5D9CC /* DKPresenter.m */; };
+		A9F302E81FD014EF00A5D9CC /* JLRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F302DD1FD014EF00A5D9CC /* JLRoutes.m */; };
+		A9F302E91FD014EF00A5D9CC /* JLRRouteDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F302DF1FD014EF00A5D9CC /* JLRRouteDefinition.m */; };
+		A9F302EA1FD014EF00A5D9CC /* JLRRouteRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F302E41FD014EF00A5D9CC /* JLRRouteRequest.m */; };
+		A9F302EB1FD014EF00A5D9CC /* JLRRouteResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F302E51FD014EF00A5D9CC /* JLRRouteResponse.m */; };
+		A9F302EC1FD014EF00A5D9CC /* JLRParsingUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F302E61FD014EF00A5D9CC /* JLRParsingUtilities.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +77,16 @@
 		A9F302D61FD0065D00A5D9CC /* DKViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKViewModel.m; sourceTree = "<group>"; };
 		A9F302D81FD0071400A5D9CC /* DKPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKPresenter.h; sourceTree = "<group>"; };
 		A9F302D91FD0071400A5D9CC /* DKPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKPresenter.m; sourceTree = "<group>"; };
+		A9F302DD1FD014EF00A5D9CC /* JLRoutes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLRoutes.m; sourceTree = "<group>"; };
+		A9F302DF1FD014EF00A5D9CC /* JLRRouteDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLRRouteDefinition.m; sourceTree = "<group>"; };
+		A9F302E01FD014EF00A5D9CC /* JLRRouteRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLRRouteRequest.h; sourceTree = "<group>"; };
+		A9F302E11FD014EF00A5D9CC /* JLRRouteResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLRRouteResponse.h; sourceTree = "<group>"; };
+		A9F302E21FD014EF00A5D9CC /* JLRParsingUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLRParsingUtilities.h; sourceTree = "<group>"; };
+		A9F302E31FD014EF00A5D9CC /* JLRRouteDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLRRouteDefinition.h; sourceTree = "<group>"; };
+		A9F302E41FD014EF00A5D9CC /* JLRRouteRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLRRouteRequest.m; sourceTree = "<group>"; };
+		A9F302E51FD014EF00A5D9CC /* JLRRouteResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLRRouteResponse.m; sourceTree = "<group>"; };
+		A9F302E61FD014EF00A5D9CC /* JLRParsingUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLRParsingUtilities.m; sourceTree = "<group>"; };
+		A9F302E71FD014EF00A5D9CC /* JLRoutes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLRoutes.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +128,7 @@
 		A9276AB41FCE48C00025FC7D /* DKTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				A9F302DB1FD014EF00A5D9CC /* Vendor */,
 				A9F302CB1FCFE0E100A5D9CC /* Network */,
 				A9A398601FCE85FB00883765 /* Protocol */,
 				A9A398621FCE91E000883765 /* View */,
@@ -212,6 +228,39 @@
 				A9F302CD1FCFE0F100A5D9CC /* DKNetwork.m */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		A9F302DB1FD014EF00A5D9CC /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				A9F302DC1FD014EF00A5D9CC /* JLRoutes */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		A9F302DC1FD014EF00A5D9CC /* JLRoutes */ = {
+			isa = PBXGroup;
+			children = (
+				A9F302E71FD014EF00A5D9CC /* JLRoutes.h */,
+				A9F302DD1FD014EF00A5D9CC /* JLRoutes.m */,
+				A9F302DE1FD014EF00A5D9CC /* Classes */,
+			);
+			path = JLRoutes;
+			sourceTree = "<group>";
+		};
+		A9F302DE1FD014EF00A5D9CC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A9F302DF1FD014EF00A5D9CC /* JLRRouteDefinition.m */,
+				A9F302E01FD014EF00A5D9CC /* JLRRouteRequest.h */,
+				A9F302E11FD014EF00A5D9CC /* JLRRouteResponse.h */,
+				A9F302E21FD014EF00A5D9CC /* JLRParsingUtilities.h */,
+				A9F302E31FD014EF00A5D9CC /* JLRRouteDefinition.h */,
+				A9F302E41FD014EF00A5D9CC /* JLRRouteRequest.m */,
+				A9F302E51FD014EF00A5D9CC /* JLRRouteResponse.m */,
+				A9F302E61FD014EF00A5D9CC /* JLRParsingUtilities.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,14 +366,19 @@
 			files = (
 				A9F302C01FCFAC2300A5D9CC /* DKDetailView.m in Sources */,
 				A9F302D11FD003F500A5D9CC /* DKDetailModel.m in Sources */,
+				A9F302EC1FD014EF00A5D9CC /* JLRParsingUtilities.m in Sources */,
 				A9F302D41FD005CA00A5D9CC /* DKModel.m in Sources */,
+				A9F302E81FD014EF00A5D9CC /* JLRoutes.m in Sources */,
 				A9F302D71FD0065D00A5D9CC /* DKViewModel.m in Sources */,
 				A9F302CE1FCFE0F100A5D9CC /* DKNetwork.m in Sources */,
 				A9276ABA1FCE48C00025FC7D /* ViewController.m in Sources */,
 				A9276AC51FCE48C00025FC7D /* main.m in Sources */,
+				A9F302E91FD014EF00A5D9CC /* JLRRouteDefinition.m in Sources */,
 				A9F302DA1FD0071400A5D9CC /* DKPresenter.m in Sources */,
 				A9276AB71FCE48C00025FC7D /* AppDelegate.m in Sources */,
 				A9F302C71FCFD5FD00A5D9CC /* DKDetailViewModel.m in Sources */,
+				A9F302EA1FD014EF00A5D9CC /* JLRRouteRequest.m in Sources */,
+				A9F302EB1FD014EF00A5D9CC /* JLRRouteResponse.m in Sources */,
 				A9276ADB1FCE83190025FC7D /* DetailViewController.m in Sources */,
 				A94CEF741FCEB39E00549619 /* DKDetailPresenter.m in Sources */,
 				A9A398651FCE923100883765 /* DKView.m in Sources */,
