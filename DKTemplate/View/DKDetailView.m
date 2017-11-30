@@ -58,11 +58,17 @@ static NSString * const kCellID = @"kCellID";
 }
 
 
+-(void)setViewModel:(id<DKViewModelProtocol>)viewModel{
+    _viewModel = viewModel;
+    [self.detailTableView reloadData];
+}
+
+
 
 
 #pragma mark - UITableViewDelegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 20;
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

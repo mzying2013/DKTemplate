@@ -10,26 +10,7 @@
 #import "DKModelProtocol.h"
 
 @interface DKModel : NSObject<DKModelProtocol>
-
-/**
- 地点
- */
-@property (nonatomic,strong,readonly) NSString * name;
-
-/**
- 天气
- */
-@property (nonatomic,strong,readonly) NSString * text;
-
-/**
- 风向
- */
-@property (nonatomic,strong,readonly) NSString * wind_direction;
-
-/**
- 温度
- */
-@property (nonatomic,strong,readonly) NSString * temperature;
+@property (nonatomic,strong,readonly) NSArray * datas;
 
 
 @end

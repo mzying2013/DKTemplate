@@ -9,10 +9,12 @@
 #import "DetailViewController.h"
 #import "DKDetailPresenter.h"
 #import "DKDetailView.h"
+#import "DKDetailViewModel.h"
 
 @interface DetailViewController ()
-@property (nonatomic,strong) DKDetailPresenter * presenter;
+@property (nonatomic,strong) DKDetailPresenter * detailPresenter;
 @property (nonatomic,strong) DKDetailView * detailView;
+@property (nonatomic,strong) DKDetailViewModel * detailViewModel;
 
 @end
 
@@ -23,6 +25,8 @@
 
 -(void)loadView{
     self.view = self.detailView;
+    
+    [self adapterView];
 }
 
 - (void)viewDidLoad {
@@ -53,6 +57,30 @@
     }
     return _detailView;
 }
+
+
+-(DKDetailPresenter *)detailPresenter{
+    if (!_detailPresenter) {
+        _detailPresenter = [DKDetailPresenter new];
+    }
+    return _detailPresenter;
+}
+
+
+-(DKDetailViewModel *)detailViewModel{
+    if (!_detailViewModel) {
+        _detailViewModel = [DKDetailViewModel new];
+    }
+    return _detailViewModel;
+}
+
+
+
+#pragma mark - Adapter
+-(void)adapterView{
+    [self.detailPresenter adapterWithView:self.detailView viewModel:self.detailViewModel];
+}
+
 
 
 
