@@ -7,8 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+@protocol DKViewProtocol;
+@protocol DKViewModelProtocol;
 
 @protocol DKPresenterProtocol <NSObject>
 -(void)push;
+- (void)adapterWithView:(id<DKViewProtocol>)view viewModel:(id<DKViewModelProtocol>)viewModel;
 
 @end

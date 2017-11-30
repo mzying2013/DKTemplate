@@ -7,8 +7,11 @@
 //
 
 #import "DetailViewController.h"
+#import "DKDetailPresenter.h"
 
 @interface DetailViewController ()
+@property (nonatomic,strong) DKDetailPresenter * presenter;
+
 
 @end
 
