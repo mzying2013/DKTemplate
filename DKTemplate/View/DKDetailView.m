@@ -7,6 +7,8 @@
 //
 
 #import "DKDetailView.h"
+#import "DKDetailViewModel.h"
+#import "DKModel.h"
 
 static NSString * const kCellID = @"kCellID";
 
@@ -68,7 +70,7 @@ static NSString * const kCellID = @"kCellID";
 
 #pragma mark - UITableViewDelegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 0;
+    return self.viewModel.model.datas.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

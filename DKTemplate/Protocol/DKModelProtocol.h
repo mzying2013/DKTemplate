@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @protocol DKModelProtocol <NSObject>
+@property (nonatomic,strong) NSArray * datas;
 +(instancetype)modelWithDictionary:(NSDictionary *)dictionary;
 
 @end

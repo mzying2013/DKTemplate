@@ -10,7 +10,7 @@
 #import "DKModelProtocol.h"
 
 @interface DKModel : NSObject<DKModelProtocol>
-@property (nonatomic,strong,readonly) NSArray * datas;
+@property (nonatomic,strong) NSArray * datas;
 
 
 @end
