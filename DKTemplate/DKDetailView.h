@@ -1,20 +1,17 @@
 //
-//  DKViewProtocol.h
+//  DKDetailView.h
 //  DKTemplate
 //
-//  Created by bill on 2017/11/29.
+//  Created by bill on 2017/11/30.
 //  Copyright © 2017年 bill. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-@protocol DKViewModelProtocol;
-@protocol DKPresenterProtocol;
+#import <UIKit/UIKit.h>
+#import "DKViewProtocol.h"
 
-@protocol DKViewProtocol <NSObject>
+@interface DKDetailView : UIView<DKViewProtocol>
 @property (nonatomic,strong) id<DKViewModelProtocol> viewModel;
 @property (nonatomic,strong) id<DKPresenterProtocol> presenter;
 
+
 @end
-
-
-

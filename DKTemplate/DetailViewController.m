@@ -8,14 +8,22 @@
 
 #import "DetailViewController.h"
 #import "DKDetailPresenter.h"
+#import "DKDetailView.h"
 
 @interface DetailViewController ()
 @property (nonatomic,strong) DKDetailPresenter * presenter;
-
+@property (nonatomic,strong) DKDetailView * detailView;
 
 @end
 
 @implementation DetailViewController
+
+
+#pragma mark - Life Cycle
+
+-(void)loadView{
+    self.view = self.detailView;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,5 +44,18 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+#pragma mark - Property Method
+-(DKDetailView*)detailView{
+    if (!_detailView) {
+        _detailView = [DKDetailView new];
+    }
+    return _detailView;
+}
+
+
+
+
 
 @end
