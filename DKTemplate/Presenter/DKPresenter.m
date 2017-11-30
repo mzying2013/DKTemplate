@@ -1,18 +1,22 @@
 //
-//  DKDetailPresenter.m
+//  DKPresenter.m
 //  DKTemplate
 //
-//  Created by bill on 2017/11/29.
+//  Created by bill on 2017/11/30.
 //  Copyright © 2017年 bill. All rights reserved.
 //
 
-#import "DKDetailPresenter.h"
+#import "DKPresenter.h"
 #import "DKViewModelProtocol.h"
 #import "DKViewProtocol.h"
 
-@implementation DKDetailPresenter
+@implementation DKPresenter
 
--(void)adapterWithView:(id<DKViewProtocol>)view viewModel:(id<DKViewModelProtocol>)viewModel{
+-(void)push{
+    NSLog(@"view will push.......");
+}
+
+- (void)adapterWithView:(id<DKViewProtocol>)view viewModel:(id<DKViewModelProtocol>)viewModel{
     _view = view;
     _viewModel = viewModel;
     
@@ -29,11 +33,6 @@
     }];
 }
 
-
-
--(void)push{
-    
-}
 
 
 

@@ -7,6 +7,9 @@
 //
 
 #import "DKView.h"
+#import "DKViewModel.h"
+#import "DKModel.h"
+#import "DKPresenter.h"
 
 static NSString * const kCellID = @"kCellID";
 
@@ -47,6 +50,11 @@ static NSString * const kCellID = @"kCellID";
     self.dkTableView.frame = self.bounds;
 }
 
+-(void)setViewModel:(id<DKViewModelProtocol>)viewModel{
+    _viewModel = viewModel;
+    [self.dkTableView reloadData];
+}
+
 
 
 #pragma mark - Property Method
@@ -63,22 +71,23 @@ static NSString * const kCellID = @"kCellID";
 
 #pragma mark - UITableViewDelegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 20;
+    return self.viewModel.model.datas.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:kCellID];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld",(long)indexPath.row+1];
+    NSString * text = self.viewModel.model.datas[indexPath.row];
+    cell.textLabel.text = text;
     return cell;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 100;
+    return 60;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    [self.presenter push];
 }
 
 

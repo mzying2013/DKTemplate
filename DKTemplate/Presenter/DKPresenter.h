@@ -1,8 +1,8 @@
 //
-//  DKDetailPresenter.h
+//  DKPresenter.h
 //  DKTemplate
 //
-//  Created by bill on 2017/11/29.
+//  Created by bill on 2017/11/30.
 //  Copyright © 2017年 bill. All rights reserved.
 //
 
@@ -11,8 +11,7 @@
 @protocol DKViewProtocol;
 @protocol DKViewModelProtocol;
 
-
-@interface DKDetailPresenter : NSObject<DKPresenterProtocol>
+@interface DKPresenter : NSObject<DKPresenterProtocol>
 @property (nonatomic,weak) id<DKViewProtocol> view;
 @property (nonatomic,weak) id<DKViewModelProtocol> viewModel;
 

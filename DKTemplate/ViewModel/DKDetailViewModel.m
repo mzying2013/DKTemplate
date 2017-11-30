@@ -13,10 +13,12 @@
 @implementation DKDetailViewModel
 
 -(void)dynamicBindingWithFinishedCallBack:(void (^)(void))finishCallBack{
+    __weak typeof(self) _self = self;
+    
     [[DKNetwork share] dataWithURLString:@"weather/now.json"
                                   params:@{@"location":@"深圳"}
                                completed:^(NSDictionary *data) {
-                                   _model = [DKDetailModel modelWithDictionary:data];
+                                   _self.model = [DKDetailModel modelWithDictionary:data];
                                    finishCallBack();
                                }];
 }

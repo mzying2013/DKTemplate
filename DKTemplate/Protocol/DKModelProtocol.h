@@ -10,6 +10,7 @@
 
 @protocol DKModelProtocol <NSObject>
 @property (nonatomic,strong) NSArray * datas;
+@optional
 +(instancetype)modelWithDictionary:(NSDictionary *)dictionary;
 
 @end

@@ -20,6 +20,9 @@
 		A9F302C71FCFD5FD00A5D9CC /* DKDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F302C61FCFD5FD00A5D9CC /* DKDetailViewModel.m */; };
 		A9F302CE1FCFE0F100A5D9CC /* DKNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F302CD1FCFE0F100A5D9CC /* DKNetwork.m */; };
 		A9F302D11FD003F500A5D9CC /* DKDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F302D01FD003F500A5D9CC /* DKDetailModel.m */; };
+		A9F302D41FD005CA00A5D9CC /* DKModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F302D31FD005CA00A5D9CC /* DKModel.m */; };
+		A9F302D71FD0065D00A5D9CC /* DKViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F302D61FD0065D00A5D9CC /* DKViewModel.m */; };
+		A9F302DA1FD0071400A5D9CC /* DKPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F302D91FD0071400A5D9CC /* DKPresenter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,12 @@
 		A9F302CD1FCFE0F100A5D9CC /* DKNetwork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKNetwork.m; sourceTree = "<group>"; };
 		A9F302CF1FD003F500A5D9CC /* DKDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKDetailModel.h; sourceTree = "<group>"; };
 		A9F302D01FD003F500A5D9CC /* DKDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKDetailModel.m; sourceTree = "<group>"; };
+		A9F302D21FD005CA00A5D9CC /* DKModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKModel.h; sourceTree = "<group>"; };
+		A9F302D31FD005CA00A5D9CC /* DKModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKModel.m; sourceTree = "<group>"; };
+		A9F302D51FD0065D00A5D9CC /* DKViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKViewModel.h; sourceTree = "<group>"; };
+		A9F302D61FD0065D00A5D9CC /* DKViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKViewModel.m; sourceTree = "<group>"; };
+		A9F302D81FD0071400A5D9CC /* DKPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKPresenter.h; sourceTree = "<group>"; };
+		A9F302D91FD0071400A5D9CC /* DKPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKPresenter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +175,8 @@
 		A9F302C21FCFD58900A5D9CC /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				A9F302D81FD0071400A5D9CC /* DKPresenter.h */,
+				A9F302D91FD0071400A5D9CC /* DKPresenter.m */,
 				A94CEF721FCEB39E00549619 /* DKDetailPresenter.h */,
 				A94CEF731FCEB39E00549619 /* DKDetailPresenter.m */,
 			);
@@ -175,6 +186,8 @@
 		A9F302C31FCFD5BB00A5D9CC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A9F302D21FD005CA00A5D9CC /* DKModel.h */,
+				A9F302D31FD005CA00A5D9CC /* DKModel.m */,
 				A9F302CF1FD003F500A5D9CC /* DKDetailModel.h */,
 				A9F302D01FD003F500A5D9CC /* DKDetailModel.m */,
 			);
@@ -184,6 +197,8 @@
 		A9F302C41FCFD5BB00A5D9CC /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				A9F302D51FD0065D00A5D9CC /* DKViewModel.h */,
+				A9F302D61FD0065D00A5D9CC /* DKViewModel.m */,
 				A9F302C51FCFD5FD00A5D9CC /* DKDetailViewModel.h */,
 				A9F302C61FCFD5FD00A5D9CC /* DKDetailViewModel.m */,
 			);
@@ -302,9 +317,12 @@
 			files = (
 				A9F302C01FCFAC2300A5D9CC /* DKDetailView.m in Sources */,
 				A9F302D11FD003F500A5D9CC /* DKDetailModel.m in Sources */,
+				A9F302D41FD005CA00A5D9CC /* DKModel.m in Sources */,
+				A9F302D71FD0065D00A5D9CC /* DKViewModel.m in Sources */,
 				A9F302CE1FCFE0F100A5D9CC /* DKNetwork.m in Sources */,
 				A9276ABA1FCE48C00025FC7D /* ViewController.m in Sources */,
 				A9276AC51FCE48C00025FC7D /* main.m in Sources */,
+				A9F302DA1FD0071400A5D9CC /* DKPresenter.m in Sources */,
 				A9276AB71FCE48C00025FC7D /* AppDelegate.m in Sources */,
 				A9F302C71FCFD5FD00A5D9CC /* DKDetailViewModel.m in Sources */,
 				A9276ADB1FCE83190025FC7D /* DetailViewController.m in Sources */,

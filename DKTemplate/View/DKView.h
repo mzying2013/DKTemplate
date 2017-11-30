@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DKViewProtocol.h"
 
-@interface DKView : UIView
+@interface DKView : UIView<DKViewProtocol>
+@property (nonatomic,strong) id<DKViewModelProtocol> viewModel;
+@property (nonatomic,strong) id<DKPresenterProtocol> presenter;
 
 @end
