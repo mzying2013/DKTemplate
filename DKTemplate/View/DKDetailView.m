@@ -76,12 +76,14 @@ static NSString * const kCellID = @"kCellID";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:kCellID];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld",(long)indexPath.row+1];
+    NSString * title = self.viewModel.model.datas[indexPath.row][@"title"];
+    NSString * value = self.viewModel.model.datas[indexPath.row][@"value"];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@: %@",title,value];
     return cell;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 100;
+    return 60;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
