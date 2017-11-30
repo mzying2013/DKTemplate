@@ -8,7 +8,7 @@
 
 #import "DKDetailView.h"
 #import "DKDetailViewModel.h"
-#import "DKModel.h"
+#import "DKDetailModel.h"
 
 static NSString * const kCellID = @"kCellID";
 

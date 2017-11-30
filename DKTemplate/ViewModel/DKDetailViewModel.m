@@ -7,7 +7,7 @@
 //
 
 #import "DKDetailViewModel.h"
-#import "DKModel.h"
+#import "DKDetailModel.h"
 #import "DKNetwork.h"
 
 @implementation DKDetailViewModel
@@ -16,7 +16,7 @@
     [[DKNetwork share] dataWithURLString:@"weather/now.json"
                                   params:@{@"location":@"深圳"}
                                completed:^(NSDictionary *data) {
-                                   _model = [DKModel modelWithDictionary:data];
+                                   _model = [DKDetailModel modelWithDictionary:data];
                                    finishCallBack();
                                }];
 }

@@ -1,5 +1,5 @@
 //
-//  DKModel.h
+//  DKDetailModel.h
 //  DKTemplate
 //
 //  Created by bill on 2017/11/30.
@@ -9,8 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "DKModelProtocol.h"
 
-@interface DKModel : NSObject<DKModelProtocol>
+@interface DKDetailModel : NSObject<DKModelProtocol>
 @property (nonatomic,strong) NSArray * datas;
-
 
 @end

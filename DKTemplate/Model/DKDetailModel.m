@@ -1,27 +1,29 @@
 //
-//  DKModel.m
+//  DKDetailModel.m
 //  DKTemplate
 //
 //  Created by bill on 2017/11/30.
 //  Copyright © 2017年 bill. All rights reserved.
 //
 
-#import "DKModel.h"
+#import "DKDetailModel.h"
 
-@interface DKModel(){
+
+@interface DKDetailModel(){
     NSDictionary * _data;
     NSArray * _packArray;
 }
 
+
 @end
 
 
-@implementation DKModel
 
+@implementation DKDetailModel
 
 #pragma makr - DKModelProtocol
 +(instancetype)modelWithDictionary:(NSDictionary *)dictionary{
-    DKModel * model = [[DKModel alloc] initWithDictionary:dictionary];
+    DKDetailModel * model = [[DKDetailModel alloc] initWithDictionary:dictionary];
     return model;
 }
 
@@ -71,7 +73,6 @@
 -(NSString *)temperature{
     return _data[@"now"][@"temperature"];
 }
-
 
 
 
