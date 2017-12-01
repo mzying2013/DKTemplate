@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DKViewControllerProtocol.h"
 
-@interface DetailViewController : UIViewController
+@interface DetailViewController : UIViewController<DKViewControllerProtocol>
+
 
 @end

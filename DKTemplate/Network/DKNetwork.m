@@ -47,18 +47,26 @@ static NSString * const kWeatherHost = @"https://api.seniverse.com/v3/";
     //访问地址
     NSMutableString * _mString = [NSMutableString stringWithString:kWeatherHost];
     [_mString appendString:URLString];
-    NSURL * URL = [NSURL URLWithString:[_mString copy]];
     
     //参数
     NSMutableDictionary * _mDictionary = [NSMutableDictionary dictionary];
     [_mDictionary setValue:kWeatherAPIKey forKey:@"key"];
     if (params) {
-        [_mDictionary setDictionary:params];
+        [_mDictionary addEntriesFromDictionary:params];
+    }
+    params = [_mDictionary copy];
+    
+    //GET参数拼接
+    [_mString appendString:@"?"];
+    NSInteger index = 0;
+    for (NSString * key in params.allKeys) {
+        [_mString appendFormat:@"%@=%@",key,params[key]];
+        if (index < params.allKeys.count - 1) {
+            [_mString appendString:@"&"];
+        }
+        ++index;
     }
     
-    NSMutableURLRequest * mURLRequest = [NSMutableURLRequest requestWithURL:URL];
-    [mURLRequest setHTTPMethod:@"GET"];
-    [mURLRequest setHTTPBody:[NSKeyedArchiver archivedDataWithRootObject:[_mDictionary copy]]];
     
     //回调
     void(^_completionHandler)(NSData * data,
@@ -66,11 +74,20 @@ static NSString * const kWeatherHost = @"https://api.seniverse.com/v3/";
                               NSError * error) = ^(NSData * data,
                                                    NSURLResponse * response,
                                                    NSError * error){
+        if (error) {
+            NSLog(@"net work error:%@",error);
+            return;
+        }
         NSDictionary * dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
         completedHandler(dictionary);
     };
     
-    NSURLSessionDataTask * task = [self.session dataTaskWithRequest:[mURLRequest copy] completionHandler:_completionHandler];
+    NSCharacterSet * cSet = [NSCharacterSet URLFragmentAllowedCharacterSet];
+    NSString * URLStringEncoding = [[_mString copy] stringByAddingPercentEncodingWithAllowedCharacters:cSet];
+    NSURL * URL = [NSURL URLWithString:URLStringEncoding];
+    NSURLSessionDataTask * task = [self.session dataTaskWithURL:URL
+                                              completionHandler:_completionHandler];
+    [task resume];
     return task;
 }
 

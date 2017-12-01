@@ -43,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A9160E3F1FD12FC300166093 /* DKViewControllerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKViewControllerProtocol.h; sourceTree = "<group>"; };
 		A9276AB21FCE48C00025FC7D /* DKTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DKTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9276AB51FCE48C00025FC7D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A9276AB61FCE48C00025FC7D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -169,6 +170,7 @@
 				A9A398661FCEA16100883765 /* DKModelProtocol.h */,
 				A9A398671FCEA17B00883765 /* DKViewModelProtocol.h */,
 				A9A398681FCEA1D400883765 /* DKPresenterProtocol.h */,
+				A9160E3F1FD12FC300166093 /* DKViewControllerProtocol.h */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";

@@ -50,6 +50,19 @@
 */
 
 
+#pragma mark - DKViewControllerProtocol
+-(instancetype)initWithParameter:(NSDictionary<NSString *,id> *)parameter{
+    self = [super init];
+    
+    if (self) {
+        self.detailViewModel.userInfo = parameter;
+    }
+    
+    return self;
+}
+
+
+
 #pragma mark - Property Method
 -(DKDetailView*)detailView{
     if (!_detailView) {

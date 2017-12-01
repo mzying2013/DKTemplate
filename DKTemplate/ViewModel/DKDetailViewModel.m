@@ -16,7 +16,7 @@
     __weak typeof(self) _self = self;
     
     [[DKNetwork share] dataWithURLString:@"weather/now.json"
-                                  params:@{@"location":@"深圳"}
+                                  params:@{@"location":self.userInfo[@"text"]}
                                completed:^(NSDictionary *data) {
                                    _self.model = [DKDetailModel modelWithDictionary:data];
                                    finishCallBack();
