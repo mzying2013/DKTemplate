@@ -56,6 +56,7 @@ static NSString * const kWeatherHost = @"https://api.seniverse.com/v3/";
     }
     params = [_mDictionary copy];
     
+    
     //GET参数拼接
     [_mString appendString:@"?"];
     NSInteger index = 0;
@@ -84,11 +85,11 @@ static NSString * const kWeatherHost = @"https://api.seniverse.com/v3/";
         });
     };
     
+    //发起请求
     NSCharacterSet * cSet = [NSCharacterSet URLFragmentAllowedCharacterSet];
     NSString * URLStringEncoding = [[_mString copy] stringByAddingPercentEncodingWithAllowedCharacters:cSet];
     NSURL * URL = [NSURL URLWithString:URLStringEncoding];
-    NSURLSessionDataTask * task = [self.session dataTaskWithURL:URL
-                                              completionHandler:_completionHandler];
+    NSURLSessionDataTask * task = [self.session dataTaskWithURL:URL completionHandler:_completionHandler];
     [task resume];
     return task;
 }
