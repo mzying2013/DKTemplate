@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "JLRoutes.h"
+#import "JLRoutes+DKMap.h"
 
 @interface AppDelegate ()
 
@@ -18,6 +20,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [JLRoutes dk_addAllRoutes];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor orangeColor];
@@ -29,6 +32,12 @@
     
     return YES;
 }
+
+
+-(BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options{
+    return [JLRoutes routeURL:url];
+}
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {

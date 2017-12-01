@@ -16,6 +16,8 @@
 		A9276ADB1FCE83190025FC7D /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9276ADA1FCE83190025FC7D /* DetailViewController.m */; };
 		A94CEF741FCEB39E00549619 /* DKDetailPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A94CEF731FCEB39E00549619 /* DKDetailPresenter.m */; };
 		A9A398651FCE923100883765 /* DKView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A398641FCE923100883765 /* DKView.m */; };
+		A9B5FF791FD0F617002E0862 /* JLRoutes+DKMap.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B5FF781FD0F617002E0862 /* JLRoutes+DKMap.m */; };
+		A9B5FF7C1FD0FE37002E0862 /* UIViewController+DKTop.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B5FF7B1FD0FE37002E0862 /* UIViewController+DKTop.m */; };
 		A9F302C01FCFAC2300A5D9CC /* DKDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F302BF1FCFAC2300A5D9CC /* DKDetailView.m */; };
 		A9F302C71FCFD5FD00A5D9CC /* DKDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F302C61FCFD5FD00A5D9CC /* DKDetailViewModel.m */; };
 		A9F302CE1FCFE0F100A5D9CC /* DKNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F302CD1FCFE0F100A5D9CC /* DKNetwork.m */; };
@@ -63,6 +65,10 @@
 		A9A398661FCEA16100883765 /* DKModelProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKModelProtocol.h; sourceTree = "<group>"; };
 		A9A398671FCEA17B00883765 /* DKViewModelProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKViewModelProtocol.h; sourceTree = "<group>"; };
 		A9A398681FCEA1D400883765 /* DKPresenterProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKPresenterProtocol.h; sourceTree = "<group>"; };
+		A9B5FF771FD0F617002E0862 /* JLRoutes+DKMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JLRoutes+DKMap.h"; sourceTree = "<group>"; };
+		A9B5FF781FD0F617002E0862 /* JLRoutes+DKMap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JLRoutes+DKMap.m"; sourceTree = "<group>"; };
+		A9B5FF7A1FD0FE37002E0862 /* UIViewController+DKTop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DKTop.h"; sourceTree = "<group>"; };
+		A9B5FF7B1FD0FE37002E0862 /* UIViewController+DKTop.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DKTop.m"; sourceTree = "<group>"; };
 		A9F302BE1FCFAC2300A5D9CC /* DKDetailView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKDetailView.h; sourceTree = "<group>"; };
 		A9F302BF1FCFAC2300A5D9CC /* DKDetailView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKDetailView.m; sourceTree = "<group>"; };
 		A9F302C51FCFD5FD00A5D9CC /* DKDetailViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKDetailViewModel.h; sourceTree = "<group>"; };
@@ -128,6 +134,7 @@
 		A9276AB41FCE48C00025FC7D /* DKTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				A9B5FF731FD0F4BA002E0862 /* Common */,
 				A9F302DB1FD014EF00A5D9CC /* Vendor */,
 				A9F302CB1FCFE0E100A5D9CC /* Network */,
 				A9A398601FCE85FB00883765 /* Protocol */,
@@ -175,6 +182,17 @@
 				A9F302BF1FCFAC2300A5D9CC /* DKDetailView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		A9B5FF731FD0F4BA002E0862 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A9B5FF771FD0F617002E0862 /* JLRoutes+DKMap.h */,
+				A9B5FF781FD0F617002E0862 /* JLRoutes+DKMap.m */,
+				A9B5FF7A1FD0FE37002E0862 /* UIViewController+DKTop.h */,
+				A9B5FF7B1FD0FE37002E0862 /* UIViewController+DKTop.m */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		A9F302C11FCFD56000A5D9CC /* ViewController */ = {
@@ -368,6 +386,7 @@
 				A9F302D11FD003F500A5D9CC /* DKDetailModel.m in Sources */,
 				A9F302EC1FD014EF00A5D9CC /* JLRParsingUtilities.m in Sources */,
 				A9F302D41FD005CA00A5D9CC /* DKModel.m in Sources */,
+				A9B5FF791FD0F617002E0862 /* JLRoutes+DKMap.m in Sources */,
 				A9F302E81FD014EF00A5D9CC /* JLRoutes.m in Sources */,
 				A9F302D71FD0065D00A5D9CC /* DKViewModel.m in Sources */,
 				A9F302CE1FCFE0F100A5D9CC /* DKNetwork.m in Sources */,
@@ -380,6 +399,7 @@
 				A9F302EA1FD014EF00A5D9CC /* JLRRouteRequest.m in Sources */,
 				A9F302EB1FD014EF00A5D9CC /* JLRRouteResponse.m in Sources */,
 				A9276ADB1FCE83190025FC7D /* DetailViewController.m in Sources */,
+				A9B5FF7C1FD0FE37002E0862 /* UIViewController+DKTop.m in Sources */,
 				A94CEF741FCEB39E00549619 /* DKDetailPresenter.m in Sources */,
 				A9A398651FCE923100883765 /* DKView.m in Sources */,
 			);
@@ -526,6 +546,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 6PTG33TQCL;
 				INFOPLIST_FILE = DKTemplate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mzying.DKTemplate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -543,6 +564,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 6PTG33TQCL;
 				INFOPLIST_FILE = DKTemplate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mzying.DKTemplate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
