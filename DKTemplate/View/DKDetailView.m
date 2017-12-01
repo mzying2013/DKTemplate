@@ -54,6 +54,7 @@ static NSString * const kCellID = @"kCellID";
         _detailTableView = [[UITableView alloc] init];
         _detailTableView.delegate = self;
         _detailTableView.dataSource = self;
+        _detailTableView.tableFooterView = [UIView new];
 //        [_detailTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kCellID];
     }
     return _detailTableView;
