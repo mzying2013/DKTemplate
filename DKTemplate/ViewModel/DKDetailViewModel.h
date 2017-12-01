@@ -12,6 +12,6 @@
 
 @interface DKDetailViewModel : NSObject<DKViewModelProtocol>
 @property (nonatomic,strong) id<DKModelProtocol> model;
-
+@property (nonatomic,copy) NSDictionary<NSString *,id> * userInfo;
 
 @end

@@ -13,4 +13,7 @@
 @property (nonatomic,strong) id<DKModelProtocol> model;
 -(void)dynamicBindingWithFinishedCallBack:(void(^)(void))finishCallBack;
 
+@optional
+@property (nonatomic,copy) NSDictionary<NSString *,id> * userInfo;
+
 @end
