@@ -42,6 +42,9 @@
                 [_mArray addObject:@{@"title":@"天气",@"value":self.text}];
                 [_mArray addObject:@{@"title":@"风向",@"value":self.wind_direction}];
                 [_mArray addObject:@{@"title":@"温度",@"value":self.temperature}];
+                [_mArray addObject:@{@"title":@"气压",@"value":self.pressure}];
+                [_mArray addObject:@{@"title":@"相对湿度",@"value":self.humidity}];
+                [_mArray addObject:@{@"title":@"能见度",@"value":self.visibility}];
                 _packArray = [_mArray copy];
             }
         }else{
@@ -73,8 +76,22 @@
 }
 
 -(NSString *)temperature{
-    return _data[@"now"][@"temperature"];
+    return [_data[@"now"][@"temperature"] stringByAppendingString:@"℃"];
 }
+
+-(NSString *)pressure{
+    return [_data[@"now"][@"pressure"] stringByAppendingString:@"百帕"];
+}
+
+-(NSString *)humidity{
+    return [_data[@"now"][@"humidity"] stringByAppendingString:@"%"];
+}
+
+
+-(NSString *)visibility{
+    return [_data[@"now"][@"visibility"] stringByAppendingString:@"KM"];
+}
+
 
 
 

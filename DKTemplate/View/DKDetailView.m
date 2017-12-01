@@ -54,7 +54,7 @@ static NSString * const kCellID = @"kCellID";
         _detailTableView = [[UITableView alloc] init];
         _detailTableView.delegate = self;
         _detailTableView.dataSource = self;
-        [_detailTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kCellID];
+//        [_detailTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kCellID];
     }
     return _detailTableView;
 }
@@ -67,7 +67,6 @@ static NSString * const kCellID = @"kCellID";
 
 
 
-
 #pragma mark - UITableViewDelegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.viewModel.model.datas.count;
@@ -75,10 +74,16 @@ static NSString * const kCellID = @"kCellID";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:kCellID];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:kCellID];
+    }
+    
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     NSString * title = self.viewModel.model.datas[indexPath.row][@"title"];
     NSString * value = self.viewModel.model.datas[indexPath.row][@"value"];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@: %@",title,value];
+    cell.textLabel.text = title;
+    cell.detailTextLabel.text = value;
     return cell;
 }
 
