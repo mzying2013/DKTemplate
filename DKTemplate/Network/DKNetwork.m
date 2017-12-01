@@ -79,7 +79,9 @@ static NSString * const kWeatherHost = @"https://api.seniverse.com/v3/";
             return;
         }
         NSDictionary * dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-        completedHandler(dictionary);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            completedHandler(dictionary);
+        });
     };
     
     NSCharacterSet * cSet = [NSCharacterSet URLFragmentAllowedCharacterSet];

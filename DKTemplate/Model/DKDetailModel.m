@@ -44,6 +44,8 @@
                 [_mArray addObject:@{@"title":@"温度",@"value":self.temperature}];
                 _packArray = [_mArray copy];
             }
+        }else{
+            _packArray = @[@{@"title":@"暂无数据",@"value":@"检查请求参数"}];
         }
     }
     return self;
