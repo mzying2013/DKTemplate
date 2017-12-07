@@ -33,7 +33,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self wr_setNavBarBarTintColor:[UIColor orangeColor]];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "DKViewControllerProtocol.h"
+#import "BaseViewController.h"
 
-@interface DetailViewController : UIViewController<DKViewControllerProtocol>
+@interface DetailViewController : BaseViewController<DKViewControllerProtocol>
 
 
 @end

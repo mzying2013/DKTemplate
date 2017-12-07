@@ -11,4 +11,5 @@
 @protocol DKViewControllerProtocol <NSObject>
 -(instancetype)initWithParameter:(NSDictionary<NSString*,id> *)parameter;
 
+
 @end

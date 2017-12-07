@@ -14,6 +14,7 @@
 		A9276AC51FCE48C00025FC7D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9276AC41FCE48C00025FC7D /* main.m */; };
 		A9276ACF1FCE48C00025FC7D /* DKTemplateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9276ACE1FCE48C00025FC7D /* DKTemplateTests.m */; };
 		A9276ADB1FCE83190025FC7D /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9276ADA1FCE83190025FC7D /* DetailViewController.m */; };
+		A93331E91FD94062008D3A14 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A93331E81FD94062008D3A14 /* BaseViewController.m */; };
 		A94CEF741FCEB39E00549619 /* DKDetailPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A94CEF731FCEB39E00549619 /* DKDetailPresenter.m */; };
 		A970091D1FD92EFC009DD0B7 /* DKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A970091C1FD92EFC009DD0B7 /* DKNavigationController.m */; };
 		A97009401FD9383F009DD0B7 /* WRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A970093C1FD9383F009DD0B7 /* WRNavigationBar.m */; };
@@ -61,6 +62,8 @@
 		A9276AD01FCE48C00025FC7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9276AD91FCE83190025FC7D /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		A9276ADA1FCE83190025FC7D /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		A93331E71FD94062008D3A14 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		A93331E81FD94062008D3A14 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		A94CEF721FCEB39E00549619 /* DKDetailPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKDetailPresenter.h; sourceTree = "<group>"; };
 		A94CEF731FCEB39E00549619 /* DKDetailPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKDetailPresenter.m; sourceTree = "<group>"; };
 		A970091B1FD92EFC009DD0B7 /* DKNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKNavigationController.h; sourceTree = "<group>"; };
@@ -220,6 +223,8 @@
 		A9F302C11FCFD56000A5D9CC /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A93331E71FD94062008D3A14 /* BaseViewController.h */,
+				A93331E81FD94062008D3A14 /* BaseViewController.m */,
 				A970091B1FD92EFC009DD0B7 /* DKNavigationController.h */,
 				A970091C1FD92EFC009DD0B7 /* DKNavigationController.m */,
 				A9276AB81FCE48C00025FC7D /* ViewController.h */,
@@ -408,6 +413,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9F302C01FCFAC2300A5D9CC /* DKDetailView.m in Sources */,
+				A93331E91FD94062008D3A14 /* BaseViewController.m in Sources */,
 				A97009411FD9383F009DD0B7 /* WRCustomNavigationBar.m in Sources */,
 				A9F302D11FD003F500A5D9CC /* DKDetailModel.m in Sources */,
 				A9F302EC1FD014EF00A5D9CC /* JLRParsingUtilities.m in Sources */,
