@@ -10,6 +10,7 @@
 #import "DKDetailPresenter.h"
 #import "DKDetailView.h"
 #import "DKDetailViewModel.h"
+#import "WRNavigationBar.h"
 
 @interface DetailViewController ()
 @property (nonatomic,strong) DKDetailPresenter * detailPresenter;
@@ -32,12 +33,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self wr_setNavBarBarTintColor:[UIColor orangeColor]];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+#pragma mark - Override Method
+
+
+
+
 
 /*
 #pragma mark - Navigation

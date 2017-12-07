@@ -10,6 +10,7 @@
 #import "ViewController.h"
 #import "JLRoutes.h"
 #import "JLRoutes+DKMap.h"
+#import "DKNavigationController.h"
 
 @interface AppDelegate ()
 
@@ -25,7 +26,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor orangeColor];
     ViewController * vc = [[ViewController alloc] init];
-    UINavigationController * nc = [[UINavigationController alloc] initWithRootViewController:vc];
+    DKNavigationController * nc = [[DKNavigationController alloc] initWithRootViewController:vc];
     
     self.window.rootViewController = nc;
     [self.window makeKeyAndVisible];

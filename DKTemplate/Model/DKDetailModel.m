@@ -40,11 +40,11 @@
                 NSMutableArray * _mArray = [NSMutableArray array];
                 [_mArray addObject:@{@"title":@"地点",@"value":self.name}];
                 [_mArray addObject:@{@"title":@"天气",@"value":self.text}];
-                [_mArray addObject:@{@"title":@"风向",@"value":self.wind_direction}];
+//                [_mArray addObject:@{@"title":@"风向",@"value":self.wind_direction}];
                 [_mArray addObject:@{@"title":@"温度",@"value":self.temperature}];
-                [_mArray addObject:@{@"title":@"气压",@"value":self.pressure}];
-                [_mArray addObject:@{@"title":@"相对湿度",@"value":self.humidity}];
-                [_mArray addObject:@{@"title":@"能见度",@"value":self.visibility}];
+//                [_mArray addObject:@{@"title":@"气压",@"value":self.pressure}];
+//                [_mArray addObject:@{@"title":@"相对湿度",@"value":self.humidity}];
+//                [_mArray addObject:@{@"title":@"能见度",@"value":self.visibility}];
                 _packArray = [_mArray copy];
             }
         }else{

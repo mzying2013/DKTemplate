@@ -17,7 +17,7 @@
 
 #pragma mark - DKPresenterProtocol
 -(void)push:(id)userInfo{
-    NSString * text = userInfo;
+    NSString * text = (NSString *)userInfo;
     
     NSURL * viewControllerURL = [NSURL URLWithString:@"dktemplate://push/DetailViewController"];
     [[JLRoutes globalRoutes] routeURL:viewControllerURL withParameters:@{@"text":text}];
