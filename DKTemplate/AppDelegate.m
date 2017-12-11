@@ -11,7 +11,7 @@
 #import "JLRoutes.h"
 #import "JLRoutes+DKMap.h"
 #import "DKNavigationController.h"
-#import "WRNavigationBar.h"
+//#import "WRNavigationBar.h"
 
 @interface AppDelegate ()
 
@@ -24,12 +24,12 @@
     // Override point for customization after application launch.
     [JLRoutes dk_addAllRoutes];
     
-    [WRNavigationBar wr_setDefaultNavBarShadowImageHidden:YES];
-    UIColor * color = [UIColor colorWithRed:97/255.0 green:153/255.0 blue:114/255.0 alpha:1.0];
-    [WRNavigationBar wr_setDefaultNavBarBarTintColor:color];
-    [WRNavigationBar wr_setDefaultNavBarTintColor:[UIColor whiteColor]];
-    [WRNavigationBar wr_setDefaultNavBarTitleColor:[UIColor whiteColor]];
-    [WRNavigationBar wr_setDefaultStatusBarStyle:UIStatusBarStyleLightContent];
+//    [WRNavigationBar wr_setDefaultNavBarShadowImageHidden:YES];
+//    UIColor * color = [UIColor colorWithRed:97/255.0 green:153/255.0 blue:114/255.0 alpha:1.0];
+//    [WRNavigationBar wr_setDefaultNavBarBarTintColor:color];
+//    [WRNavigationBar wr_setDefaultNavBarTintColor:[UIColor whiteColor]];
+//    [WRNavigationBar wr_setDefaultNavBarTitleColor:[UIColor whiteColor]];
+//    [WRNavigationBar wr_setDefaultStatusBarStyle:UIStatusBarStyleLightContent];
     
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];

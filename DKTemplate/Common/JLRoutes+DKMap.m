@@ -31,6 +31,23 @@
         
         return YES;
     }];
+    
+    
+    [routes addRoute:@"/pop" handler:^BOOL(NSDictionary<NSString *,id> * _Nonnull parameters) {
+        id viewController = parameters[@"viewController"];
+        UINavigationController * topViewController = (UINavigationController *)[UIViewController dk_topViewController];
+        
+        if (viewController) {
+            if (![viewController isKindOfClass:[UIViewController class]]) {
+                return NO;
+            }
+            [topViewController popToViewController:(UIViewController *)viewController animated:YES];
+        }else{
+            [topViewController popViewControllerAnimated:YES];
+        }
+        
+        return YES;
+    }];
 }
 
 

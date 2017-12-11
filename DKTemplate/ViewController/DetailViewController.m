@@ -11,8 +11,9 @@
 #import "DKDetailView.h"
 #import "DKDetailViewModel.h"
 #import "WRNavigationBar.h"
+#import "DKNavigationControllerProtocol.h"
 
-@interface DetailViewController ()
+@interface DetailViewController ()<DKNavigationControllerProtocol>
 @property (nonatomic,strong) DKDetailPresenter * detailPresenter;
 @property (nonatomic,strong) DKDetailView * detailView;
 @property (nonatomic,strong) DKDetailViewModel * detailViewModel;
@@ -67,6 +68,12 @@
     }
     
     return self;
+}
+
+
+#pragma mark - DKNavigationControllerProtocol
+-(BOOL)dk_isHiddenNavigationBar{
+    return YES;
 }
 
 

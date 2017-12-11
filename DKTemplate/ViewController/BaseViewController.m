@@ -7,7 +7,7 @@
 //
 
 #import "BaseViewController.h"
-#import "DKViewControllerProtocol.h"
+#import "DKNavigationControllerProtocol.h"
 
 @interface BaseViewController ()
 
@@ -15,21 +15,39 @@
 
 @implementation BaseViewController
 
+
+#pragma mark - Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    
-    if ([self conformsToProtocol:@protocol(DKViewControllerProtocol)]) {
-        NSLog(@"%@ conforms to protocol %@",
-              NSStringFromClass(self.class),
-              NSStringFromProtocol(@protocol(DKViewControllerProtocol)));
-    }else{
-        NSLog(@"%@ not not conforms to protocol %@",
-              NSStringFromClass(self.class),
-              NSStringFromProtocol(@protocol(DKViewControllerProtocol)));
+    if ([self conformsToProtocol:@protocol(DKNavigationControllerProtocol)]) {
+        if ([self respondsToSelector:@selector(dk_disableInteractivePop)]) {
+            
+        }
+        if ([self respondsToSelector:@selector(dk_isHiddenNavigationBar)]) {
+            BOOL isHidden = (BOOL)[self performSelector:@selector(dk_isHiddenNavigationBar)];
+            self.navigationController.navigationBarHidden = isHidden;
+        }
     }
 }
+
+//
+//-(void)viewWillAppear:(BOOL)animated{
+//    [super viewWillAppear:animated];
+//
+//    if ([self conformsToProtocol:@protocol(DKNavigationControllerProtocol)]) {
+//        if ([self respondsToSelector:@selector(dk_disableInteractivePop)]) {
+//
+//        }
+//        if ([self respondsToSelector:@selector(dk_isHiddenNavigationBar)]) {
+////            BOOL isHidden = (BOOL)[self performSelector:@selector(dk_isHiddenNavigationBar)];
+////            self.navigationController.navigationBar.hidden = isHidden;
+//        }
+//    }else{
+//        self.navigationController.navigationBar.hidden = NO;
+//    }
+//}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -9,6 +9,7 @@
 #import "DKDetailPresenter.h"
 #import "DKViewModelProtocol.h"
 #import "DKViewProtocol.h"
+#import "JLRoutes.h"
 
 @implementation DKDetailPresenter
 
@@ -32,7 +33,13 @@
 
 
 -(void)push:(id)userInfo{
-    
+    NSURL * viewControllerURL = [NSURL URLWithString:@"dktemplate://push/MoreDetailViewController"];
+    [[JLRoutes globalRoutes] routeURL:viewControllerURL];
+}
+
+-(void)pop{
+    NSURL * viewControllerURL = [NSURL URLWithString:@"dktemplate://pop"];
+    [[JLRoutes globalRoutes] routeURL:viewControllerURL];
 }
 
 

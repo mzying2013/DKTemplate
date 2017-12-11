@@ -9,6 +9,7 @@
 #import "DKDetailView.h"
 #import "DKDetailViewModel.h"
 #import "DKDetailModel.h"
+#import "DKPresenterProtocol.h"
 
 static NSString * const kCellID = @"kCellID";
 
@@ -93,7 +94,11 @@ static NSString * const kCellID = @"kCellID";
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    if (indexPath.row == 0) {
+        [self.presenter pop];
+    }else{
+        [self.presenter push:nil];
+    }
 }
 
 
