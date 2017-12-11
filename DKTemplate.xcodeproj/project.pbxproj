@@ -17,8 +17,6 @@
 		A93331E91FD94062008D3A14 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A93331E81FD94062008D3A14 /* BaseViewController.m */; };
 		A94CEF741FCEB39E00549619 /* DKDetailPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A94CEF731FCEB39E00549619 /* DKDetailPresenter.m */; };
 		A970091D1FD92EFC009DD0B7 /* DKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A970091C1FD92EFC009DD0B7 /* DKNavigationController.m */; };
-		A97009401FD9383F009DD0B7 /* WRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A970093C1FD9383F009DD0B7 /* WRNavigationBar.m */; };
-		A97009411FD9383F009DD0B7 /* WRCustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A970093F1FD9383F009DD0B7 /* WRCustomNavigationBar.m */; };
 		A972060C1FDE73780059D063 /* UIViewController+RTRootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A97206051FDE73780059D063 /* UIViewController+RTRootNavigationController.m */; };
 		A972060E1FDE73780059D063 /* RTRootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A97206091FDE73780059D063 /* RTRootNavigationController.m */; };
 		A97206121FDE7A5D0059D063 /* MoreDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A97206111FDE7A5D0059D063 /* MoreDetailViewController.m */; };
@@ -72,10 +70,6 @@
 		A94CEF731FCEB39E00549619 /* DKDetailPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKDetailPresenter.m; sourceTree = "<group>"; };
 		A970091B1FD92EFC009DD0B7 /* DKNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKNavigationController.h; sourceTree = "<group>"; };
 		A970091C1FD92EFC009DD0B7 /* DKNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKNavigationController.m; sourceTree = "<group>"; };
-		A970093C1FD9383F009DD0B7 /* WRNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRNavigationBar.m; sourceTree = "<group>"; };
-		A970093D1FD9383F009DD0B7 /* WRCustomNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRCustomNavigationBar.h; sourceTree = "<group>"; };
-		A970093E1FD9383F009DD0B7 /* WRNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRNavigationBar.h; sourceTree = "<group>"; };
-		A970093F1FD9383F009DD0B7 /* WRCustomNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRCustomNavigationBar.m; sourceTree = "<group>"; };
 		A97206051FDE73780059D063 /* UIViewController+RTRootNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RTRootNavigationController.m"; sourceTree = "<group>"; };
 		A97206061FDE73780059D063 /* RTRootNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTRootNavigationController.h; sourceTree = "<group>"; };
 		A97206081FDE73780059D063 /* UIViewController+RTRootNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RTRootNavigationController.h"; sourceTree = "<group>"; };
@@ -183,17 +177,6 @@
 				A9276AD01FCE48C00025FC7D /* Info.plist */,
 			);
 			path = DKTemplateTests;
-			sourceTree = "<group>";
-		};
-		A970093B1FD9383F009DD0B7 /* WRNavigationBar */ = {
-			isa = PBXGroup;
-			children = (
-				A970093E1FD9383F009DD0B7 /* WRNavigationBar.h */,
-				A970093C1FD9383F009DD0B7 /* WRNavigationBar.m */,
-				A970093D1FD9383F009DD0B7 /* WRCustomNavigationBar.h */,
-				A970093F1FD9383F009DD0B7 /* WRCustomNavigationBar.m */,
-			);
-			path = WRNavigationBar;
 			sourceTree = "<group>";
 		};
 		A97206031FDE73780059D063 /* RTRootNavigationController */ = {
@@ -313,7 +296,6 @@
 			isa = PBXGroup;
 			children = (
 				A97206031FDE73780059D063 /* RTRootNavigationController */,
-				A970093B1FD9383F009DD0B7 /* WRNavigationBar */,
 				A9F302DC1FD014EF00A5D9CC /* JLRoutes */,
 			);
 			path = Vendor;
@@ -448,7 +430,6 @@
 				A9F302C01FCFAC2300A5D9CC /* DKDetailView.m in Sources */,
 				A97206121FDE7A5D0059D063 /* MoreDetailViewController.m in Sources */,
 				A93331E91FD94062008D3A14 /* BaseViewController.m in Sources */,
-				A97009411FD9383F009DD0B7 /* WRCustomNavigationBar.m in Sources */,
 				A9F302D11FD003F500A5D9CC /* DKDetailModel.m in Sources */,
 				A9F302EC1FD014EF00A5D9CC /* JLRParsingUtilities.m in Sources */,
 				A9F302D41FD005CA00A5D9CC /* DKModel.m in Sources */,
@@ -459,7 +440,6 @@
 				A9276ABA1FCE48C00025FC7D /* ViewController.m in Sources */,
 				A972060E1FDE73780059D063 /* RTRootNavigationController.m in Sources */,
 				A9276AC51FCE48C00025FC7D /* main.m in Sources */,
-				A97009401FD9383F009DD0B7 /* WRNavigationBar.m in Sources */,
 				A972060C1FDE73780059D063 /* UIViewController+RTRootNavigationController.m in Sources */,
 				A9F302E91FD014EF00A5D9CC /* JLRRouteDefinition.m in Sources */,
 				A9F302DA1FD0071400A5D9CC /* DKPresenter.m in Sources */,

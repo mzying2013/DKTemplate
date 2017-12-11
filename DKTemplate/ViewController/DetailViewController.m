@@ -10,7 +10,6 @@
 #import "DKDetailPresenter.h"
 #import "DKDetailView.h"
 #import "DKDetailViewModel.h"
-#import "WRNavigationBar.h"
 #import "DKNavigationControllerProtocol.h"
 
 @interface DetailViewController ()<DKNavigationControllerProtocol>

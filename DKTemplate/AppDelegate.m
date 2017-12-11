@@ -32,6 +32,7 @@
 //    [WRNavigationBar wr_setDefaultStatusBarStyle:UIStatusBarStyleLightContent];
     
     
+    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor orangeColor];
     ViewController * vc = [[ViewController alloc] init];
